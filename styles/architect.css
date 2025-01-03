@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* shared style */
 * {
-    font-family: "Work Sans", serif;
-    font-optical-sizing: auto;
-    /* font-weight: <weight>;
+  font-family: "Work Sans", serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>;
   font-style: normal; */
 }
-.btn-primary{
+
+.btn-primary {
   background: #ff900e;
   border-radius: 8px;
   padding: 20px 25px;
@@ -17,68 +19,140 @@
   border: 0;
 }
 
+.text-light-grey {
+  color: #727272;
+}
+
 /* header styles */
-header{
+header {
   background: rgba(255, 144, 14, 0.10);
   padding: 50px 240px;
 }
-nav{
+
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.nav-title{
+
+.nav-title {
   font-size: 2.8rem;
   font-weight: 700;
   color: #131313;
 }
-nav > ul{
+
+nav>ul {
   display: flex;
 }
-nav li{
+
+nav li {
   list-style: none;
   margin-right: 30px;
-font-weight: 500;
-font-size: 1rem;
+  font-weight: 500;
+  font-size: 1rem;
 }
-nav li a{
+
+nav li a {
   text-decoration: none;
   color: #424242;
 }
+
 /* banner styles */
 
-.banner-content{
+.banner-content {
   max-width: 800px;
   text-align: center;
   margin: 0 auto;
 }
-.banner-title{
+
+.banner-title {
   font-size: 4rem;
   font-weight: 7600;
   color: #131313;
 }
-.banner-descrp{
-  color: #727272;
-}
-.banner img{
+
+.banner img {
   margin-top: 20px;
   width: 100%;
 }
 
+
+/* main style  */
+main {
+  max-width: 1440px;
+  margin: 50px auto;
+}
+
+.teams-container {
+  display: flex;
+  align-items: center;
+}
+
+.teams-img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.teams-content {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.teams-title {
+  font-size: 2.8rem;
+}
+
+.teams-title .one {
+  color: #727272;
+  font-weight: 500;
+}
+
+.teams-title .three {
+  color: #ff900e;
+  font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* responsive styles */
 /* mobile */
 @media screen and (max-width:576px) {
-  header{
+  header {
     padding: 20px;
   }
-  nav{
+
+  nav,
+  .teams-container {
     flex-direction: column;
   }
-  
+
+  .teams-img-container {
+    grid-template-columns: 1fr;
+  }
+
+  .teams-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
+
 /* tab */
 @media screen and (min-width:576px) and (max-width:992px) {
-  nav{
+
+  nav,
+  .teams-container {
     flex-direction: column;
   }
 }
